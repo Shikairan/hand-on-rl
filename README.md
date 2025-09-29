@@ -17,9 +17,7 @@
 
 ## 强化学习的目标
 
-在强化学习中，目标是训练一个神经网络 $Policy$ $\pi$ ，在所有状态 $s$ 下，给出相应的 $Action$ ，得到的 $Return$ 的期望值最大。即:
-  
-$E(R(\tau))_{\tau \sim P_{\theta}(\tau)} = \sum_{\tau} R(\tau) P_{\theta}(\tau)$
+在强化学习中，目标是训练一个神经网络 $Policy$ $\pi$ ，在所有状态 $s$ 下，给出相应的 $Action$ ，得到的 $Return$ 的期望值最大。即: $\E(R(\tau))_{\tau \sim P_{\theta}(\tau)} = \sum_{\tau} R(\tau) P_{\theta}(\tau)$
   
 其中:
 1. $E(R(\tau))_{\tau \sim P_{\theta}(\tau)}$:表示在策略 $P_{\theta}(\tau)$ 下轨迹 $\tau$ 的回报 $R(\tau)$ 的期望值。
@@ -28,7 +26,7 @@ $E(R(\tau))_{\tau \sim P_{\theta}(\tau)} = \sum_{\tau} R(\tau) P_{\theta}(\tau)$
 4. $P_{\theta}(\tau)$:在参数 $\theta$ 下生成轨迹 $\tau$ 的概率，通常由策略或策略网络确定。
 5. $\theta$:策略的参数，控制着策略 $P_{\theta}$ 的行为。
 
-所以，我们的目标是找到一个策略 $\pi$，使得 $\E(R(\tau))\_{\tau \sim P\_{\theta}(\tau)}$ 最大。那怎么找到这个策略呢？我们使用梯度上升的办法，即不断地更新策略参数 $\theta$，使得 $E(R(\tau))_{\tau \sim P_{\theta}(\tau)}$ 不断增大。
+所以，我们的目标是找到一个策略 $\pi$，使得 $\E(R(\tau))\_{\tau \sim P\_{\theta}(\tau)}$ 最大。那怎么找到这个策略呢？我们使用梯度上升的办法，即不断地更新策略参数      $\theta$ ，使得  $E(R(\tau))_{\tau \sim P_{\theta}(\tau)}$  不断增大。
 
 首先，我们来计算梯度:
 
