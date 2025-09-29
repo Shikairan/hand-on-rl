@@ -17,7 +17,7 @@
 
 ## 强化学习的目标
 
-在强化学习中，目标是训练一个神经网络 $Policy$ $\pi$ ，在所有状态 $s$ 下，给出相应的 $Action$ ，得到的 $Return$ 的期望值最大。即: $E(R(\tau))_{\tau\sim P_{\theta}(\tau)} = \sum_{\tau}R(\tau)P_{\theta}(\tau)$
+在强化学习中，目标是训练一个神经网络 $Policy$ $\pi$ ，在所有状态 $s$ 下，给出相应的 $Action$ ，得到的 $Return$ 的期望值最大。即 $E(R(\tau))_{\tau\sim P_{\theta}(\tau)} = \sum_{\tau}R(\tau)P_{\theta}(\tau)$
   
 其中:
 1. $E(R(\tau))_{\tau \sim P_{\theta}(\tau)}$:表示在策略 $P_{\theta}(\tau)$ 下轨迹 $\tau$ 的回报 $R(\tau)$ 的期望值。
